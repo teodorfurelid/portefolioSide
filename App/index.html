@@ -4,13 +4,34 @@
     <meta charset="UTF-8">
     <title>Heimside</title>
     <script src="knapper.js" defer></script>
-    <link rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
     <h1>Heimsida</h1>
+    <div class="hidden">
+        <label for="heimsida">Heimsida: <link href="index.html" id="heimsida" name="heimsida"></label>
+    </div>
     <div id="container">
-        <h2>Her skal eg skrive om meg sjølv</h2>
-        
+        <form id="nyPerson">
+            <fieldset>
+                <legend>Legge inn namn og email:</legend>
+                <label for="namn">Namn: <input id="namn" type="text" value="Teodor" placeholder="Skriv inn namn"></label>
+                <label for="email">Email: <input type="text" id="email" name="email" value="teo@testmail.com" placeholder="Skriv inn mail her"></label>
+                <button type="submit">Legg til info</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="output" class="hidden">
+        <table>
+            <thead>
+                <tr>
+                    <th>Namn</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
     </div>
 
 </body>
